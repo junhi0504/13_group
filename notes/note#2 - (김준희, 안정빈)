@@ -1,0 +1,49 @@
+예제 2-2 C++로 이루어진 코드를 일반 C언어로 나타내라
+
+김준희 Q : std::cout으로 이루어진 코드들을 printf로 어떻게 나타내는가?
+안정빈 A : 변수 int n , char c와 True 는 출력할 때 %d, %c 와 같은 서식 문자를 이용하여 printf("%c5.5-%dhello%d\n", c, n, true);로 출력한다.
+
+안정빈 Q : area(n)을 출력할 때 소수점 두 자리까지 출력을 어떻게 하는가?
+김준희 A : %.2f를 사용하여 둘째 자리까지 출력할 수 있다.
+
+
+에제 2-5 
+
+안정빈 Q : 암호가 맞을 때까지 계속 출력하게 하려면 어떻게 해야하는가?
+김준희 A : while(true) 반복문을 통해 무한으로 출력하고 if() 조건문을 이용하여 암호가 맞을시 break;가 되는 코드를 만든다.
+
+김준희 Q : password가 "C++"이랑 같은지 string 비교하는 함수를 어떻게 짜는가?
+안정빈 A : 두 개의 string을 비교하고 리턴값이 0일시 두 문자열이 같다는 strcmp() 함수를 이용한다.
+
+
+교재 90p 8번 문제 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a = 0;
+	int i;
+	char name[100];
+	char longname[100];
+	cout << "이름 입력 : ";
+	for (i = 1; i <= 5; i++) {
+		cin.getline(name, 100, ';');
+		cout << i << " : " << name << endl;
+		if (a < strlen(name)) {
+			a = strlen(name);
+			strcpy(longname, name);
+		}
+	}
+	cout << "가장 긴 이름은 : " << longname;
+	return 0;
+}
+
+김준희 Q : cin.getline(name, 100, ';'); 코드가 의미하는 것이 무엇인가?
+안정빈 A : 입력받은 문자열 str에 저장하는 함수로 cin.getline(입력 받은 문자열을 저장할 배열, 배열 크기, 구분자);로 나타낸다.
+
+안정빈 Q : 문자열 name의 길이를 나타내고 이를 비교하여 가장 긴 문자열을 어떻게 나타는가?
+김준희 A : strlen(name)을 이용하여 name의 문자열 길이를 구하고 이를 새로운 a에 저장하며 만약 다음 문자열의 길이가 a보다 클 시 longname에 저장하는 if문을 만들고 마지막에 longname을 출력한다.
+
+
+
