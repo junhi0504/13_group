@@ -1,7 +1,7 @@
 예제 2-2 C++로 이루어진 코드를 일반 C언어로 나타내라
 
 김준희 Q : std::cout으로 이루어진 코드들을 printf로 어떻게 나타내는가?
-안정빈 A : 변수 int n , char c와 True 는 출력할 때 %d, %c 와 같은 서식 문자를 이용하여 printf("%c5.5-%dhello%d\n", c, n, true);로 출력한다.
+안정빈 A : 변수 int n , char c와 true 는 출력할 때 %d, %c 와 같은 서식 문자를 이용하여 printf("%c5.5-%dhello%d\n", c, n, true);로 출력한다.
 
 안정빈 Q : area(n)을 출력할 때 소수점 두 자리까지 출력을 어떻게 하는가?
 김준희 A : %.2f를 사용하여 둘째 자리까지 출력할 수 있다.
