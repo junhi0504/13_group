@@ -1,10 +1,10 @@
-1. Power& return_This() {                                           2. Power return_This() {
-          return *this;                                                       return *this;
-   }  //정상 실행                                                       }  //정상 실행
+1. Power& return_This() {                                    2. Power return_This() {
+          return *this;                                               return *this;
+   }  //정상 실행                                                }  //정상 실행
 
-3. Power& return_This() {                                           4. Power * return_This() {
-          return this;                                                        return this;
-   }  //에러 발생                                                       }  //정상 실행
+3. Power& return_This() {                                    4. Power * return_This() {
+          return this;                                                 return this;
+   }  //에러 발생                                                }  //정상 실행
 
 5. Power return_This() {
           return this;
@@ -65,3 +65,33 @@ return tmp;
 따라서 예제 7-8의 경우 a와 b의 값이 출력될 때 변경된 값이 출력되지만 
 예제 7-10의 경우 a는 바뀌지만 b값은 a가 증가되기 이전의 복사값을 가지므로 변경되지 않음
 
++연산자를 외부 프렌드 함수로 작성
+Power operator+ (Power op1, Power op2) { 
+  Power tmp;
+  tmp.kick = op1.kick + op2.kick;
+  tmp.punch = op1.punch + op2.punch; 
+  return tmp;
+}
+
+단항 연산자 ++를 프렌드 함수로 작성
+전위 연산자
+Power& operator++ (Power& op) {
+  op.kick++;
+  op.punch++;
+  return op;
+}
+후위 연산자
+Power operator++ (Power& op, int x) {
+  Power tmp = op;
+  op.kick++;
+  op.punch++;
+  return tmp;
+}
+
+참조를 리턴하는 << 연산자
+Power& Power::operator <<(int n) { 
+kick += n;
+punch += n;
+return *this;
+} //kick과 punch 정수 n을 더하고 참조를 리턴하는 << 연산자 함수
+==> 참조를 리턴하지 않을 경우 연속된 << 연산이 정상 작동되지 않음
