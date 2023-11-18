@@ -75,7 +75,7 @@ protected:
 	int calc(int a, int b) { // 순수 가상 함수 구현
 		return a - b;
 	}
-}; //calc(int a, intb) 함수를 통해 파생클래스의 목적에 따라 매개 변수로 전달된 a와 b를 계산하여 결과를 리턴
+}; //calc(int a, intb) 함수를 통해 파생 클래스의 목적에 따라 매개 변수로 전달된 a와 b를 계산하여 결과를 리턴
 
 동적 바인딩 실행 중 오버라이딩에 대한 이해한 점
 void Circle::draw() { cout << "Circle" << endl; }
