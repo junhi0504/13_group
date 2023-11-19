@@ -1,4 +1,4 @@
-//Shape.cpp 파일
+--Shape.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "Shape.h"
@@ -6,7 +6,7 @@ void Shape::paint() {
 	draw();
 }
 
-//Shape.h 파일
+--Shape.h 파일--
 #ifndef SHAPE_H
 #define SHAPE_H
 class Shape {
@@ -23,7 +23,7 @@ public:
 };
 #endif
 
-//Line.cpp 파일
+--Line.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "Line.h"
@@ -32,7 +32,7 @@ void Line::draw() {
 	cout << "Line" << endl;
 }
 
-//Line.h 파일
+--Line.h 파일--
 #ifndef LINE_H
 #define LINE_H
 #include "Shape.h"
@@ -42,7 +42,7 @@ protected:
 };
 #endif
 
-//Circle.cpp 파일
+--Circle.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "Circle.h"
@@ -50,7 +50,7 @@ void Circle::draw() {
 	cout << "Circle" << endl;
 }
 
-//Circle.h 파일
+--Circle.h 파일--
 #ifndef CIRCLE_H
 #define CIRCLE_H
 #include "Shape.h"
@@ -60,7 +60,7 @@ protected:
 };
 #endif
 
-//Rect.cpp 파일
+--Rect.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "Rect.h"
@@ -68,7 +68,7 @@ void Rect::draw() {
 	cout << "Rectangle" << endl;
 }
 
-//Rect.h 파일
+--Rect.h 파일--
 #ifndef RECT_H
 #define RECT_H
 #include "Shape.h"
@@ -78,7 +78,7 @@ protected:
 };
 #endif
 
-//Graphic.cpp 파일
+--Graphic.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "GraphicEditor.h"
@@ -174,7 +174,7 @@ void GraphicEditor::call() {
 	}
 }
 
-//Graphic.h 파일
+--Graphic.h 파일--
 #ifndef GRAPHICEDITOR_H
 #define GRAPHICEDITOR_H
 #include "Shape.h"
@@ -190,7 +190,7 @@ public:
 };
 #endif
 
-//UI.cpp 파일
+--UI.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "UI.h"
@@ -214,7 +214,7 @@ int UI::two_menu() {
 	return key;
 }
 
-//UI.h 파일
+--UI.h 파일--
 #include <string>
 class UI {
 public:
@@ -223,7 +223,7 @@ public:
 	static int two_menu();
 };
 
-//main.cpp 파일
+--main.cpp 파일--
 #include <iostream>
 using namespace std;
 #include "Shape.h"
@@ -240,5 +240,5 @@ int main() {
 	return 0;
 }
 
-//실행 결과
+--실행 결과--
 https://github.com/junhi0504/13_group/issues/1#issue-2000985506
